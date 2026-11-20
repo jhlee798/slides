@@ -1,0 +1,660 @@
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="이음시 청년정책 담당 직무 지원 포트폴리오">
+  <title>이음시 청년정책 담당 | 개인 강점 포트폴리오</title>
+
+  <style>
+    :root {
+      --navy: #172b4d;
+      --blue: #3568df;
+      --light-blue: #edf3ff;
+      --bg: #f7f8fb;
+      --text: #263247;
+      --muted: #647188;
+      --white: #ffffff;
+      --line: #e1e6ef;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont,
+        "Noto Sans KR", "Malgun Gothic", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      word-break: keep-all;
+      font-size: 18px;
+    }
+
+    .container {
+      width: min(100% - 44px, 900px);
+      margin: auto;
+    }
+
+    section {
+      padding: 100px 0;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 9vw, 64px);
+      line-height: 1.3;
+      letter-spacing: -2px;
+      color: var(--navy);
+    }
+
+    h2 {
+      font-size: clamp(30px, 7vw, 42px);
+      line-height: 1.4;
+      letter-spacing: -1.5px;
+      color: var(--navy);
+      margin-bottom: 22px;
+    }
+
+    h3 {
+      font-size: 23px;
+      color: var(--navy);
+      margin-bottom: 14px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .subtext {
+      color: var(--muted);
+      margin-top: 18px;
+      max-width: 680px;
+    }
+
+    /* 01 첫 화면 */
+
+    .hero {
+      background: var(--white);
+      padding: 125px 0 115px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero .highlight {
+      color: var(--blue);
+    }
+
+    .hero-description {
+      margin-top: 30px;
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 20px;
+    }
+
+    .job-tag {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 12px 20px;
+      border-radius: 30px;
+      background: var(--light-blue);
+      color: var(--blue);
+      font-weight: 800;
+      font-size: 16px;
+    }
+
+    /* 02 강점 */
+
+    .strength-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+      margin-top: 38px;
+    }
+
+    .strength-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 32px;
+      border-radius: 20px;
+    }
+
+    .number {
+      color: var(--blue);
+      font-weight: 800;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .strength-card p {
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    /* 03 산출물 */
+
+    .portfolio {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .portfolio h2 {
+      color: var(--white);
+    }
+
+    .portfolio .eyebrow {
+      color: #a9c1ff;
+    }
+
+    .portfolio .subtext {
+      color: #d0d9e9;
+    }
+
+    .output-list {
+      display: grid;
+      gap: 18px;
+      margin-top: 38px;
+    }
+
+    .output-item {
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 17px;
+      padding: 25px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .output-icon {
+      font-size: 30px;
+      flex-shrink: 0;
+    }
+
+    .output-item strong {
+      display: block;
+      font-size: 20px;
+    }
+
+    .output-item span {
+      color: #d0d9e9;
+      font-size: 16px;
+    }
+
+    .main-button {
+      display: inline-block;
+      margin-top: 38px;
+      width: 100%;
+      padding: 22px;
+      background: var(--blue);
+      color: var(--white);
+      border: none;
+      border-radius: 14px;
+      font-size: 19px;
+      font-weight: 800;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .main-button:hover {
+      background: #2453c3;
+    }
+
+    /* 04 사례 */
+
+    .case-box {
+      margin-top: 35px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 32px;
+    }
+
+    .case-title {
+      font-size: 25px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 28px;
+    }
+
+    .case-step {
+      padding: 25px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .step-label {
+      color: var(--blue);
+      font-size: 15px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .case-step h3 {
+      margin-bottom: 12px;
+    }
+
+    .case-step p {
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 25px 0;
+    }
+
+    .metric {
+      background: var(--light-blue);
+      border-radius: 15px;
+      padding: 22px 8px;
+      text-align: center;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 34px;
+      color: var(--blue);
+      line-height: 1.4;
+    }
+
+    .metric span {
+      display: block;
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    /* 05 일하는 태도 */
+
+    .attitude {
+      background: var(--light-blue);
+    }
+
+    .attitude-quote {
+      margin-top: 30px;
+      font-size: clamp(26px, 6vw, 36px);
+      font-weight: 800;
+      line-height: 1.6;
+      color: var(--navy);
+    }
+
+    .attitude-text {
+      margin-top: 25px;
+      color: var(--muted);
+      max-width: 700px;
+    }
+
+    /* 06 연락처 */
+
+    .contact {
+      text-align: center;
+      background: var(--white);
+    }
+
+    .contact p {
+      color: var(--muted);
+    }
+
+    .contact-info {
+      margin-top: 35px;
+      display: inline-block;
+      padding: 20px 28px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* 모바일 및 태블릿 */
+
+    @media (min-width: 700px) {
+      .strength-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .strength-card {
+        padding: 30px 25px;
+      }
+
+      .main-button {
+        width: auto;
+        min-width: 300px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .container {
+        width: calc(100% - 36px);
+      }
+
+      section {
+        padding: 85px 0;
+      }
+
+      .hero {
+        padding: 100px 0 90px;
+      }
+
+      .metric-grid {
+        gap: 7px;
+      }
+
+      .metric {
+        padding: 18px 4px;
+      }
+
+      .metric strong {
+        font-size: 29px;
+      }
+
+      .metric span {
+        font-size: 13px;
+      }
+
+      .case-box {
+        padding: 23px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 01. 첫 화면 -->
+  <section class="hero">
+    <div class="container">
+
+      <div class="eyebrow">PUBLIC SERVICE PORTFOLIO</div>
+
+      <h1>
+        이음시<br>
+        <span class="highlight">청년정책 담당 지원자</span>
+      </h1>
+
+      <p class="hero-description">
+        청년정책 신청 절차의 문제를 정의하고,
+        공고문과 실제 절차를 대조하며,
+        이용자 의견을 개선 과제로 연결합니다.
+      </p>
+
+      <div class="job-tag">
+        문제 정의 · 결과 검증 · 협의와 실행
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 02. 강점 3가지 -->
+  <section>
+    <div class="container">
+
+      <div class="eyebrow">01 / CORE COMPETENCIES</div>
+
+      <h2>세 가지 업무 역량</h2>
+
+      <p class="subtext">
+        각 역량을 구체적인 조사 및 행정 산출물로 연결합니다.
+      </p>
+
+      <div class="strength-grid">
+
+        <div class="strength-card">
+          <div class="number">01 / DEFINE</div>
+          <h3>문제 정의</h3>
+          <p>
+            청년정책 신청 과정에서 막히는 지점 7곳을 확인하고,
+            문제 정의서에 발생 위치와 내용을 정리합니다.
+          </p>
+        </div>
+
+        <div class="strength-card">
+          <div class="number">02 / VERIFY</div>
+          <h3>결과 검증</h3>
+          <p>
+            공고문과 신청 절차를 대조하여
+            틀린 조항 2곳을 확인하고,
+            공고문 대조표에 기록합니다.
+          </p>
+        </div>
+
+        <div class="strength-card">
+          <div class="number">03 / EXECUTE</div>
+          <h3>협의와 실행</h3>
+          <p>
+            이용자 5명의 의견을 확인하고,
+            의견별 개선 방향과 반영 여부를
+            이용자 의견 반영표에 정리합니다.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 03. 산출물 -->
+  <section class="portfolio" id="outputs">
+    <div class="container">
+
+      <div class="eyebrow">02 / WORK OUTPUTS</div>
+
+      <h2>업무 결과물 3개</h2>
+
+      <p class="subtext">
+        문제 확인부터 내용 검증과 이용자 의견 정리까지
+        세 가지 문서로 업무 과정을 확인할 수 있습니다.
+      </p>
+
+      <div class="output-list">
+
+        <div class="output-item">
+          <div class="output-icon">01</div>
+          <div>
+            <strong>문제 정의서</strong>
+            <span>신청 과정의 막힘 7곳 및 문제 발생 위치</span>
+          </div>
+        </div>
+
+        <div class="output-item">
+          <div class="output-icon">02</div>
+          <div>
+            <strong>공고문 대조표</strong>
+            <span>공고문 검토 결과 및 오류 조항 2곳</span>
+          </div>
+        </div>
+
+        <div class="output-item">
+          <div class="output-icon">03</div>
+          <div>
+            <strong>이용자 의견 반영표</strong>
+            <span>이용자 5명의 의견 및 개선 방향</span>
+          </div>
+        </div>
+
+      </div>
+
+      <a href="#case" class="main-button">
+        산출물 3개 보기 ↓
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- 04. 사례 -->
+  <section id="case">
+    <div class="container">
+
+      <div class="eyebrow">03 / CASE STUDY</div>
+
+      <h2>청년정책 신청 절차<br>불편 분석 사례</h2>
+
+      <div class="case-box">
+
+        <div class="case-title">
+          신청 과정의 문제를 찾고 개선 과제로 정리한 사례
+        </div>
+
+        <!-- 문제 -->
+        <div class="case-step">
+
+          <div class="step-label">STEP 01 / PROBLEM</div>
+
+          <h3>문제: 신청 과정에서 발생하는 불편</h3>
+
+          <p>
+            청년정책 신청 절차를 확인하는 과정에서
+            이용자가 진행을 멈추거나 혼란을 겪는 지점이 발생했습니다.
+            공고문과 실제 신청 절차 사이의 내용 차이도 확인할 필요가 있었습니다.
+          </p>
+
+        </div>
+
+        <!-- 한 일 -->
+        <div class="case-step">
+
+          <div class="step-label">STEP 02 / ACTION</div>
+
+          <h3>한 일: 절차 조사 및 의견 확인</h3>
+
+          <div class="metric-grid">
+
+            <div class="metric">
+              <strong>7곳</strong>
+              <span>신청 과정의 막힘</span>
+            </div>
+
+            <div class="metric">
+              <strong>2곳</strong>
+              <span>오류 조항</span>
+            </div>
+
+            <div class="metric">
+              <strong>5명</strong>
+              <span>이용자 의견 확인</span>
+            </div>
+
+          </div>
+
+          <p>
+            ① 신청 과정에서 막히는 지점 7곳을 조사했습니다.<br>
+            ② 공고문과 신청 절차를 비교하여 틀린 조항 2곳을 확인했습니다.<br>
+            ③ 이용자 5명의 의견을 수렴하여 불편 사항을 정리했습니다.
+          </p>
+
+        </div>
+
+        <!-- 결과 -->
+        <div class="case-step">
+
+          <div class="step-label">STEP 03 / RESULT</div>
+
+          <h3>결과: 개선 과제 도출</h3>
+
+          <p>
+            문제 정의서, 공고문 대조표,
+            이용자 의견 반영표 총 3개의 산출물로
+            조사 내용을 정리했습니다.
+          </p>
+
+          <p style="margin-top:15px;">
+            실제 정책 및 신청 절차 개선 반영 여부:
+            <strong style="color:var(--blue);">입력 필요</strong>
+          </p>
+
+          <p style="margin-top:10px;">
+            개선 이후 이용자 만족도 및 처리 시간 변화:
+            <strong style="color:var(--blue);">입력 필요</strong>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 05. 일하는 태도 -->
+  <section class="attitude">
+    <div class="container">
+
+      <div class="eyebrow">04 / WORKING PRINCIPLE</div>
+
+      <h2>일하는 태도</h2>
+
+      <div class="attitude-quote">
+        문제를 발견하고,<br>
+        근거를 확인하고,<br>
+        개선 결과까지 검증하겠습니다.
+      </div>
+
+      <p class="attitude-text">
+        업무를 시작할 때 문제의 원인과 발생 지점을 먼저 확인합니다.
+        이후 관련 공고문과 행정 절차를 대조하여
+        객관적인 근거를 확보합니다.
+        이용자와 관계자의 의견을 확인하고,
+        개선 과제를 실행 가능한 업무로 연결하겠습니다.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- 06. 연락처 -->
+  <section class="contact">
+    <div class="container">
+
+      <div class="eyebrow">05 / CONTACT</div>
+
+      <h2>
+        청년이 실제로<br>
+        이용할 수 있는 정책을 만들겠습니다.
+      </h2>
+
+      <p>
+        문제 정의부터 결과 검증과 개선 실행까지<br>
+        청년정책 담당 업무에 기여하겠습니다.
+      </p>
+
+      <div class="contact-info">
+        연락처 및 이메일: 입력 필요
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer>
+    YOUTH POLICY · PUBLIC SERVICE PORTFOLIO
+  </footer>
+
+</body>
+</html>
